@@ -271,7 +271,17 @@
                 sessionUserWrongAnswerField.innerText = '';
                 sessionStorage.setItem(sessionUserAttemptsKey, 0);
                 sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey);
-            })
+            });
+
+            destroyDataButton.addEventListener('click', function () {
+                sessionStorage.removeItem(sessionAnswerKey);
+                sessionStorage.removetem(sessionUserAttemptsKey);
+                sessionStorage.removeItem(sessionUserIsPlayingKey);
+                localStorage.removeItem(localTotalVictoryKey);
+                localStorage.removeItem(localMaximumAttemptsKey);
+                alert('Mohon me-refresh halaman ini kembali');
+            });
+            
         </script>
     </body>
 </html>
